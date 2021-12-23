@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.toolbar-ntt {
+  position: absolute;
+  height: 72px;
+  background-color: white;
+  box-shadow: 0px 2px 2px 0px #00000033;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo-ntt {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 22px;
+}
+
+.logo-inicio {
+  margin-left: 71px;
+  height: 100%;
+  display: flex;
+}
+.logo-inicio mat-icon {
+  margin-right: 8px;
+  height: 19.44px;
+  width: 25px;
+  margin-top: 25.78px;
+  margin-bottom: 26.78px;
+}
+.logo-inicio p {
+  font-size: 22px;
+  margin-top: 22px;
+  margin-bottom: 24px;
+}

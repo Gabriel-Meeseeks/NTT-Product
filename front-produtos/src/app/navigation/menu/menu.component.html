@@ -1,0 +1,22 @@
+<script  src="js/myscript.js?v=10"></script>
+<mat-sidenav-container id="menu">
+  <mat-sidenav mode="side" align="start" opened class="menu-nav">
+
+    <mat-nav-list style="padding-top: 30px">
+      <a a mat-list-item [routerLink]="['/']" class="element" >
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        Inicío
+      </a>
+      <a a mat-list-item [routerLink]="['/cadastro']" class="element" id="store-products">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">storefront</mat-icon>
+        Produtos
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

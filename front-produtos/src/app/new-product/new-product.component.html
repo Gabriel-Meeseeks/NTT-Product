@@ -1,0 +1,17 @@
+<mat-card>
+  <p class="title">Novo Produto</p>
+  <mat-form-field class="area-input">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="ex.(Caneta BIC Preta 5)" autocomplete="off" [(ngModel)]="nome" required="true" >
+  </mat-form-field>
+  <mat-form-field class="area-input">
+    <mat-label>Preço(R$)</mat-label>
+    <input matInput placeholder="ex.(11,00)" autocomplete="off"
+    [(ngModel)]="preco" required="true"
+    currencyMask [options]="{prefix: 'R$', thousands: '.', decimal: ','}"
+    (keyup)="sendByEnter($event)">
+  </mat-form-field>
+
+  <button mat-raised-button class="botao" [routerLink]="['/cadastro']" (click)="cadastrar()" [disabled]="buttonValidation() === true"  style="background: #007BC2; color: white;">Salvar</button>
+  <button mat-raised-button class="botao" [routerLink]="['/cadastro']" style="color: #007BC2;">Cancelar</button>
+</mat-card>

@@ -1,0 +1,17 @@
+<mat-toolbar class="toolbar-ntt">
+  <figure class="logo-ntt">
+    <img src="../assets/image/NTT_company_logo.png" alt="Logo NTT" height="46px" width="128px">
+  </figure>
+
+  <div class="logo-inicio" *ngIf="titleChange() == '/'">
+
+    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    <p>Inicío</p>
+  </div>
+
+  <div class="logo-inicio" *ngIf="titleChange() != '/'">
+    <mat-icon aria-hidden="false" aria-label="Example store icon">storefront</mat-icon>
+    <p>Cadastro de Produtos</p>
+  </div>
+
+</mat-toolbar>

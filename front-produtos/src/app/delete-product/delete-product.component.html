@@ -1,0 +1,17 @@
+<mat-card *ngIf="product !== null">
+  <p class="title">Excluir Produto</p>
+
+  <mat-form-field class="area-input" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="ex.(Caneta BIC Preta 5)" autocomplete="off" disabled [value]="product.name" style="border-bottom: 1px solid gray; padding-bottom: 7px;">
+  </mat-form-field>
+
+  <mat-form-field class="area-input" appearance="fill">
+    <mat-label>Preço(R$)</mat-label>
+    <input matInput disabled [value]="product.value" #productValue
+      currencyMask [options]="{ prefix: 'R$ ', precision: 2, decimal: ','}" style="border-bottom: 1px solid gray; padding: 7px 0;">
+  </mat-form-field>
+
+  <button mat-raised-button class="botao" [routerLink]="['/cadastro']" (click)="delete()" style="background: #E43A23; color: white;">Excluir</button>
+  <button mat-raised-button class="botao" [routerLink]="['/cadastro']" style="color: #007BC2;">Cancelar</button>
+</mat-card>

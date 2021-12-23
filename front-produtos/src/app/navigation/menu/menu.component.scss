@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#menu {
+  height: 100%;
+}
+
+.menu-nav {
+  margin-top: 72px;
+  background-color: #455565;
+  height: 100%;
+  width: 225px;
+  box-sizing: border-box;
+}
+
+.element {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 11px;
+}
+
+.element mat-icon {
+  margin: 0px 16px;
+}
+
+.content {
+  margin-top: 72px;
+}

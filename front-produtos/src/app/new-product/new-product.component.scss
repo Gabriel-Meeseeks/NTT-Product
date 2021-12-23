@@ -1,0 +1,86 @@
+mat-card {
+  margin: 16px 17px 0px 18px;
+}
+
+mat-form-field {
+  width: 100% !important;
+}
+.title {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+///////////////////////////////////////////////////////////////////////////////
+
+//Estilo do input
+
+//Quando o input não estiver selecionado
+::ng-deep .mat-form-field {
+  .mat-input-element {
+    color: #000;
+    text-align: left !important;
+  }
+  .mat-form-field-label {
+    color: #000;
+  }
+  .mat-form-field-required-marker {
+    color: #fff;
+  }
+}
+
+//Quando o input for selecionado
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: #000;
+  }
+  .mat-form-field-ripple {
+    background-color: #007bc2;
+  }
+  .mat-form-field-required-marker {
+    color: #fff;
+  }
+  .mat-input-element {
+    color: #000;
+    text-align: left !important;
+  }
+}
+
+//Quando o input não estiver preenchido corretamente
+::ng-deep .mat-form-field.mat-form-field-invalid {
+  .mat-input-element {
+    color: #000;
+  }
+  .mat-form-field-label {
+    color: #e43a23;
+    .mat-form-field-required-marker {
+      color: #fff;
+    }
+  }
+  .mat-form-field-ripple {
+    background-color: #e43a23;
+  }
+}
+///////////////////////////////////////////////////////////////////////////////
+
+.botao {
+  margin-top: 23px;
+  margin-right: 15px;
+}
+
+.botao:disabled,
+.botao[disabled] {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+///////////////////////////////////////////////////
+//Pop-up
+::ng-deep .snackBarColor {
+  background-color: #28a745;
+  color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,16 @@
+<mat-card *ngIf="product !== null">
+  <p class="title">Alterar Produto</p>
+    <mat-form-field class="area-input">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="ex.(Caneta BIC Preta 5)" type="text" autocomplete="off" required="true" [value]="product.name" #productName>
+    </mat-form-field>
+    <mat-form-field class="area-input">
+      <mat-label>Preço(R$)</mat-label>
+      <input matInput placeholder="ex.(11,00)" autocomplete="off" [value]="product.value" #productValue
+      currencyMask [options]="{ prefix: 'R$ ', precision: 2, decimal: ','}">
+    </mat-form-field>
+
+    <button mat-raised-button class="botao" [routerLink]="['/cadastro']" [disabled]="validationValues(product.name, productName.value, product.value, productValue.value) === true" (click)="update(productName.value, productValue.value)"
+     style="background: #007BC2; color: white;">Salvar</button>
+    <button mat-raised-button class="botao" [routerLink]="['/cadastro']" style="color: #007BC2;">Cancelar</button>
+  </mat-card>
